@@ -1,9 +1,10 @@
 {
     "manifest_version": 2,
     "name": "Popup Open",
-    "version": "1.0",
-    "description": "This extension opens google search links in a popup wiew on the same page!",
-    "permissions": ["tabs","<all_urls>","http://*/","https://*/","activeTab","declarativeContent", "storage"],
+    "short_name": "Popup",
+    "version": "0.0.0.4",
+    "description": "This extension opens google search links in a popup view on the same page!",
+    "permissions": ["https://www.google.com/*"],
     "browser_action": {
       "default_popup": "popup.html",
       "default_icon": {
@@ -19,7 +20,7 @@
     },
     "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.google.com/*"],
       "js": ["contentscript.js"],
       "css":["mycss.css"]
     }
